@@ -10,6 +10,10 @@ import Statistics from "./task-2/Statistics";
 import friends from "./task-3/friends.json";
 import FriendList from "./task-3/FriendList";
 
+// task-4
+import transactions from "./task-4/transactions.json";
+import TransactionHistory from "./task-4/TransactionHistory";
+
 const App = () => {
   return (
     <div>
@@ -25,6 +29,8 @@ const App = () => {
       <Statistics stats={statisticalData} />
 
       <FriendList friends={friends} />
+
+      <TransactionHistory items={transactions} />
     </div>
   );
 };
