@@ -1,10 +1,10 @@
-import React from "react";
-
-import StatisticList from "./StatisticList";
+import React from 'react';
+import StatisticList from './StatisticList';
+import styles from './Statistics.module.css';
 
 const Statistics = ({ title, stats }) => (
-  <section className="statistics">
-    {title && <h2 className="title">{title}</h2>}
+  <section className={styles.Statistics}>
+    {title && <h2 className={styles.title}>{title}</h2>}
 
     <StatisticList stats={stats} />
   </section>

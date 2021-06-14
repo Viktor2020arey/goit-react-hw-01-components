@@ -1,11 +1,13 @@
-import React from "react";
+import React from 'react';
+
+import styles from './Statistics.module.css';
 
 const StatisticList = ({ stats }) => (
-  <ul>
+  <ul className={styles.list}>
     {stats.map(({ id, label, percentage }) => (
-      <li key={id}>
-        <span className="label">{label}</span>
-        <span className="percentage">{percentage}</span>
+      <li className={styles.item} key={id}>
+        <span className={styles.label}>{label}</span>
+        <span className={styles.percentage}>{percentage}%</span>
       </li>
     ))}
   </ul>
