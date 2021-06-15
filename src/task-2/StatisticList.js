@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import styles from './Statistics.module.css';
 
@@ -12,5 +13,15 @@ const StatisticList = ({ stats }) => (
     ))}
   </ul>
 );
+
+StatisticList.propTypes = {
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    }),
+  ),
+};
 
 export default StatisticList;
